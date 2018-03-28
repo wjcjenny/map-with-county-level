@@ -1,0 +1,231 @@
+/*headline*/
+
+
+/*chatter*/
+.chatter{
+    font-size: 1.35em;
+    line-height: 25px;
+}
+
+#infolead{
+    margin-top: 20px;
+}
+
+line{
+    stroke:#102039;
+}
+.text-tab{
+    margin-bottom: 20px;
+    font-family: FoundersGroteskMonoRegular;
+}
+
+/*subhead*/
+.subhead{
+    color: black;
+    font-family: FoundersGroteskCondSmBd!important;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom:0;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.subtext{
+    font-size: 15px;
+    text-align: left;
+    margin-top: 6px!important;
+    display: inline-block;
+    line-height: 20px;
+    font-family: PublicoHeadlineLight!important;
+}
+
+.subnote{
+    color: black;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom:10px;
+    margin-top: 5px;
+    text-align: center;    
+    font-family: PublicoHeadlineLight!important;
+}
+
+
+
+/*button and dropdown menu*/
+.center{
+    margin-top: 20px;
+    text-align: center!important;
+}
+
+.bttn{
+    font-family: FoundersGroteskMonoRegular!important;
+    cursor: pointer;
+    display:inline-block;
+    font-size: 15px;
+  background: white;
+  background-image: -webkit-linear-gradient(top, white, white);
+  background-image: -moz-linear-gradient(top, white, white);
+  background-image: -ms-linear-gradient(top, white, white);
+  background-image: -o-linear-gradient(top, white, white);
+  background-image: linear-gradient(to bottom, white, white);
+  color: black;
+  border: thin solid black;
+  padding: 11px 14px 11px 14px;
+  text-decoration: none;
+}
+
+@media all and (max-width: 754px) {
+    .bttn {
+      margin-top: 10px;
+    }
+}
+@media all and (max-width: 769px) {
+    .bttn {
+      margin-top: 0px;
+    }
+}
+@media all and (max-width: 1199px) {
+    .bttn {
+      margin-top: 10px!important;
+    }
+}
+.active {
+    color: white;
+    background: white;
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -ms-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, black, black);
+}
+
+
+
+.pcvisible{
+    display: block!important;
+}
+
+.phonevisible{
+    display: none!important;
+}
+
+@media all and (max-width:796px) {
+    .pcvisible{
+        display: none!important;
+    }
+    .phonevisible{
+        display: block!important;
+    }
+}
+
+
+
+
+/*map*/
+
+#superContainer{
+  width:100%;
+  padding:0!important;
+  margin-top: 40px;
+  margin-right: 0px!important;
+  margin-left:-20px;
+}
+
+
+/*div.tooltip {
+  position: absolute;
+  visibility: hidden;
+  font-size: 15px;
+  min-width: 180px;
+  max-width: 220px;
+  color: #333333;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 1;
+  padding: 5px;
+  font-family:PublicoTextRoman;
+  
+}*/
+
+div.tooltip { 
+    visibility: hidden;
+    color: #333333;
+    background-color: white;
+    border: 1px solid black!important;
+    position: absolute;     
+    text-align: left;     
+    min-width: 180px;
+    max-width: 220px;      
+    padding: 5px;
+    font-size: 15px; 
+    font-family:PublicoTextRoman;        
+    pointer-events: none;     
+}
+
+@media all and (max-width:560px) {
+    div.tooltip {
+      display: none!important;
+    }
+}
+@media all and (min-width: 561px) and (max-width: 699px) {
+    div.tooltip {
+      min-width: 100px;
+      max-width: 110px;
+    }
+    #superContainer{
+      margin-left:-40px;
+    }
+}
+@media all and (min-width: 700px) and (max-width: 800px) {
+    div.tooltip {
+      min-width: 70px;
+      max-width: 90px;
+    }
+}
+@media all and (min-width: 801px) and (max-width: 900px) {
+    div.tooltip {
+      min-width: 110px;
+      max-width: 130px;
+    }
+}
+@media all and (min-width: 901px) and (max-width: 2000px) {
+    div.tooltip {
+      min-width: 110px;
+      max-width: 180px;
+    }
+}
+
+
+.focusstate{
+  font-family:PublicoTextItalic;
+}
+
+.focusnumber{
+  font-family:PublicoTextBold;
+}
+
+
+/*sourceline*/
+#sourceline {
+   font-family:FoundersGroteskMonoRegular;
+   font-size: 12px;
+   margin-top: 20px;
+}
+
+
+.source{
+    color: black;
+    margin:0;
+}
+
+.footnote{
+    margin:0;
+    color: black;
+}
+
+.credit{
+    /*margin-top: 20px;*/
+    color: #3D3D3D;
+    float: left!important;
+    text-align: left!important;
+}

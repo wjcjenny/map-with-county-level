@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- responsive css -->
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="css/tipsy.css" type="text/css" /> -->
+        <!-- head and title-->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Map with country level</title>
+        <!-- Customized css -->
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/customized.css" rel="stylesheet">
+    </head>
+
+
+   
+
+
+    <body >
+        <section class="content main-graphics">
+        
+            <div class="masthead">
+                <div class="masthead-contents container">
+                    <div class="row">        
+                        <div class="masthead-title col-md-8 col-md-offset-2">
+                            <svg width="140" height="15" >
+                                <line x1="0" x2="126" y1="10" y2="10" stroke-width="5"/>
+                            </svg>
+                            <div class="text-tab">INTERACTIVE MAP</div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="main-content col-md-8 col-md-offset-2">
+
+
+
+<!-- part1 map -->
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <p class="subhead">
+                                    Here is a test for U.S. map with county level
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 center">
+                                <div id="rect0" class="bttn active" value="data/data-poverty.csv">Poverty(2016)</div> 
+                                <div id="rect1" class="bttn" value="data/data-education.csv">Education level (high school)</div>
+                                <div id="rect2" class="bttn" value="data/data-education.csv">Education level (bachelor)</div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="mapbox" class="map-container">
+                                	<div id="superContainer"></div>
+                                </div>
+                                <div class="tooltip"></div>
+                            </div>
+                        </div>
+
+<!-- source and note line -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="sourceline">
+                                    <p class="source">Source: Census Bureau</p>
+                                    <p class="credit">Interactive: Jiachuan Wu / NBC News</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+       <!-- d3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <!-- <script type='text/javascript' src='js/jquery.tipsy.js'></script> -->
+        <!-- embed -->
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- <script type='text/javascript'>
+            
+        </script> -->
+     
+        
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+

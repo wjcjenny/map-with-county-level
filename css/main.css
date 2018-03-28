@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: FoundersGroteskCondSmBd;
+    src: url("../fonts/FoundersGroteskCond-SmBd.otf") format("opentype");;
+}
+
+@font-face {
+    font-family: PublicoTextBold;
+    src: url("../fonts/PublicoText-Bold.otf") format("opentype");;
+}
+@font-face {
+    font-family: PublicoTextItalic;
+    src: url("../fonts/PublicoText-Italic.otf") format("opentype");;
+}
+@font-face {
+    font-family: PublicoTextRoman;
+    src: url("../fonts/PublicoText-Roman.otf") format("opentype");;
+}
+@font-face {
+    font-family: PublicoHeadlineLight;
+    src: url("../fonts/PublicoHeadline-Light.otf") format("opentype");;
+}
+
+
+@font-face {
+    font-family: FoundersGroteskMonoRegular;
+    src: url("../fonts/FoundersGroteskMono-Regular.otf") format("opentype");;
+}
+
+
+
+
+/*body*/
+body {
+    font-family: ProximaNova,ProximaNovaBold, "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+section.main-graphics{
+    width:100%;
+    margin:0;
+    padding:0px 0 0px 0;
+    
+}
+
+div.masthead{
+    position:relative;
+    margin-top:0px;
+}
