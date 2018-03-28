@@ -22,6 +22,9 @@ var pymChild = new pym.Child();
         .attr("class", "tooltip")       
         .style("opacity", 0);
 
+
+
+        
 //~~~~~~map~~~~~~
 var draw = function(data_source){
 
@@ -38,6 +41,7 @@ var draw = function(data_source){
 	// load dataset     
 	queue()
 		.defer(d3.json, "data/us-counties.json")
+        // .defer(d3.json, "data/us-counties-old-topo.json")
 		.defer(d3.csv, data_source)
 		.await( function(error, data, csv_data) {
     		csv_data = csv_data.filter( function(d) {
@@ -46,7 +50,7 @@ var draw = function(data_source){
 
             combineData(data, csv_data, "GEO_ID", "GEO.id");
 
-            console.log( data['features'])
+           
         
          	// draw map here   
 			d3.select(window)
@@ -61,8 +65,10 @@ var draw = function(data_source){
 
             var path = d3.geo.path()
             				.projection(projection);
-		
-		
+		  
+
+
+                
 			if (whichItem == "poverty") {
             	color_scale = d3.scale.linear()
             					.domain([0,3000,4000,5000,10000,50000,100000,200000,2000000])
@@ -83,7 +89,8 @@ var draw = function(data_source){
 				dataVar = 'bachelor';
 				dataText = "Pct of people hold bachelor diploma: ";
 			}
-           	
+            
+
 
             mappoverty.selectAll("path")
             	.data(counties)
@@ -136,35 +143,10 @@ var draw = function(data_source){
                     .style('visibility','hidden')  
                     .duration(500)    
                     .style("opacity", 0); 
-                });        
-            //         d3.select('.tooltip')
-            //     		.style('visibility','visible')
-            //     		.style('top', d3.event.pageY - 100 + 'px')
-            //     		.style('left', d3.event.pageX - 250 + 'px')
-            //     		.html('<span class="focusstate">'+d['properties']['county']+', '+d['properties']['state']+'</span><br />'+dataText
-            //     		+'<span class="focusnumber">'+d['properties'][dataVar]+'</span>')
-            //     		.transition()
-            //             .style('opacity', 1);
+                });
 
-                    
-            // })
 
-            // .on('mouseout', function(d) {
-            // 	d3.select(this)
-            // 	.transition()
-            //   	.style('fill', function(d) {
-            //     	if (d['properties'][dataVar] != undefined) {
-            //         	return color_scale(d['properties'][dataVar])
-            //     	} else {
-            //         	return "#FFFFFF";
-            //     	}
-            //     });
-              	
-            //   	d3.select('.tooltip')
-            //   	.style('visibility','hidden')
-            //   	.transition().style('opacity', 0);
-            // });
-           
+        
         });
 // ~~~~~end of graphic1~~~~~~//
 	function sizeChange() {
@@ -176,37 +158,60 @@ var draw = function(data_source){
 	}
 };
 
+
+
+    
+        
+
 draw("data/data-poverty.csv");
-	var container = "#superContainer";
-	function loading(){
+
+
+var container = "#superContainer";
+function loading(){
 	d3.select("g")
 	.attr("transform", "scale(" + $(container)
 	.width()/880 + ")");
 	$(".svgMap").height($(container).width()*0.618);
 }
 
-
 loading();
+
 
 $('#rect0').click(function(){
 	whichItem = 'poverty';
     draw("data/data-poverty.csv");
-	
 });	
 
 $('#rect1').click(function(){
 	whichItem = 'highschool';	
 	draw("data/data-education.csv");
-
 });
 
 $('#rect2').click(function(){
 	whichItem = 'bachelor';
 	draw("data/data-education.csv");
-	
 });
 
+// function drawstate(){
+//     var projection = d3.geo.albersUsa()
+//                         .scale(1100)
 
+//     var path = d3.geo.path()
+//                 .projection(projection);
+//     var mappoverty = svgpoverty.append("g");
+
+//     d3.json("data/us-states.json", function(json) {
+//         svgpoverty.selectAll("path")
+//             .data(json.features)
+//             .enter()
+//             .append("path")
+//             .attr("d", path)
+//             .style("stroke", "#f03b20")
+//             .style("stroke-width", "2")
+//             .style("fill","none")
+//     });
+// }
+// drawstate();
 
 });
   
