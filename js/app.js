@@ -192,26 +192,30 @@ $('#rect2').click(function(){
 	draw("data/data-education.csv");
 });
 
-// function drawstate(){
-//     var projection = d3.geo.albersUsa()
-//                         .scale(1100)
 
-//     var path = d3.geo.path()
-//                 .projection(projection);
-//     var mappoverty = svgpoverty.append("g");
+//below for state boundary
+function drawstate(){
+    var projection = d3.geo.albersUsa()
+                        .scale(1100)
 
-//     d3.json("data/us-states.json", function(json) {
-//         svgpoverty.selectAll("path")
-//             .data(json.features)
-//             .enter()
-//             .append("path")
-//             .attr("d", path)
-//             .style("stroke", "#f03b20")
-//             .style("stroke-width", "2")
-//             .style("fill","none")
-//     });
-// }
-// drawstate();
+    var path = d3.geo.path()
+                .projection(projection);
+    var mappoverty = svgpoverty.append("g");
+
+    d3.json("data/us-states.json", function(json) {
+        svgpoverty.selectAll("path")
+            .data(json.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .style("stroke", "#f03b20")
+            .style("stroke-width", "2")
+            .style("fill","none")
+    });
+}
+drawstate();
+//end for state boundary
+
 
 });
   
